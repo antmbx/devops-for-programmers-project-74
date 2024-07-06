@@ -1,12 +1,15 @@
 services:
   app:
+    image: antmbx/devops-for-programmers-project-74
     build:
         context: .
-        dockerfile: ./Dockerfile
+        dockerfile: ./Dockerfile.production
+        
+        
 #    container_name: cont_app
     #restart: always
-    volumes:
-    - ./app:/app
+#    volumes:
+#    - ./app:/app
 #    ports:
 #    - 8080:8080
 
