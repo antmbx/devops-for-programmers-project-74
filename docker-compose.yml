@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+        context: .
+        dockerfile: ./Dockerfile
+#    container_name: cont_app
+    #restart: always
+    volumes:
+    - ./app:/app
+#    ports:
+#    - 8080:8080
+
+#    environment:
+#    networks:
