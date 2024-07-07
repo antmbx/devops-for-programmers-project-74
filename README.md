@@ -5,7 +5,7 @@
 
 
 [![Actions Status](https://github.com/antmbx/devops-for-programmers-project-74/actions/workflows/push.yml/badge.svg)](https://github.com/antmbx/devops-for-programmers-project-74/actions)
-
+ 
 
 This is a simple node application that shows on the main page server HELLO HEXLET.
 
