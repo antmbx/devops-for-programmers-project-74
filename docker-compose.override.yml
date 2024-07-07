@@ -1,7 +1,7 @@
 
 services:
   app:
-    
+    hostname: app
     build:
         context: .
         dockerfile: ./Dockerfile
@@ -12,10 +12,17 @@ services:
     volumes:
     - ./app:/app
 
+    environment:
+    - NODE_ENV=development 
+    
+  
+    
+
+
   caddy:
     depends_on:
       - app
-    image: caddy:2.8
+    image: caddy:2.8.4-alpine
     #build:
         #context: .
         #dockerfile: ./Dockerfile
@@ -26,3 +33,11 @@ services:
 
     volumes:
     - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
+        
+
+    links:
+      - app:app    
+    
+
+    
+    

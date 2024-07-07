@@ -1,45 +1,14 @@
-192.168.180.8 {
-  log {
-    format json
-  }
+{
+	auto_https disable_redirects
+	
+}
 
-  # Компрессия
-  encode zstd
-  # Самоподписной сертификат
-  tls internal
-  #tls self_signed
-
-#
-#	"tls": {
-#				"automation": {
-#					"policies": [
-#						{
-#							"subjects": [
-#								"192.168.180.8"
-#							],
-#							"issuers": [
-#								{
-#									"module": "internal"
-#								}
-#							]
-#						}
-#					]
-#				}
-#			}
-#
+:80 {
+    reverse_proxy app:8080
+}
 
 
-
-
-
-
-
-
-
-
-
-  # Проксирование всех запросов в app:8080
-  # app – имя сервиса в docker-compose.yml
-  #
-  reverse_proxy app:8080
+:443 {
+	tls internal
+    reverse_proxy app:8080
 }

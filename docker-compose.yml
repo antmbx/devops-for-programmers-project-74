@@ -2,8 +2,12 @@ services:
   app:
     image: antmbx/devops-for-programmers-project-74
     build:
+        dockerfile: Dockerfile.production
         context: .
-        dockerfile: ./Dockerfile.production
+#    ports:
+#    - 8080:8080
+#    volumes:
+#    - ./app:/app    
         
         
 #    container_name: cont_app
@@ -12,6 +16,3 @@ services:
 #    - ./app:/app
 #    ports:
 #    - 8080:8080
-
-#    environment:
-#    networks:
