@@ -1,16 +1,5 @@
 setup: install db-migrate
 
-#user:
-#	useradd -d /home/user -m -s /bin/bash user
-#	USR=user
-#	PASS=`tr -dc A-Za-z0-9_ < /dev/urandom | head -c8`
-#	echo "$USR:$PASS" | sudo chpasswd
-
-
-#workdir:
-#	mkdir -p /work
-#	chown user:user /work
-
 install:
 	npm install 
 
@@ -43,7 +32,6 @@ lint-fix:
 
 test:
 	NODE_ENV=test npm test -s
-
 
 ci:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit

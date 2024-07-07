@@ -15,7 +15,8 @@ This is a simple node application that shows on the main page server HELLO HEXLE
 docker run -p 8080:8080 -e NODE_ENV=development antmbx/devops-for-programmers-project-74 make dev
 
 # open http://0.0.0.0:8080 in browser
- ```
+
+```
 
 Edit *.env* file to set up environment variables.
 
@@ -26,6 +27,12 @@ DATABASE_USERNAME=[db username]
 DATABASE_PASSWORD=[db password]
 ```
 
+P.S.
+ignore please my files:
+- deploy_from_dockerhub.sh
+- runapp.sh
+- Caddyfile_b
+- etc
 
 
 ---

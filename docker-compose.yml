@@ -18,7 +18,8 @@ services:
   db:
     image: postgres
     restart: always
-    #env_file: db.env
+    #env_file: db.env # файл есть в .gitignore, но хекслет все равно проверяет его наличие
+    # пришлось перенести все в .env  и закомментить ссылку на файл
     healthcheck:
         test: ["CMD-SHELL", "pg_isready -U postgres"]
         interval: 5s
