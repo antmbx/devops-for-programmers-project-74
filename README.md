@@ -27,6 +27,5 @@ DATABASE_PASSWORD=[db password]
 ```
 
 
-![Screen of example-app](assets/app.png)
 
 ---
