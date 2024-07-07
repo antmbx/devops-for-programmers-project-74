@@ -1,14 +1,27 @@
 {
-	auto_https disable_redirects
-	
+    auto_https disable_redirects
+    http_port 80
+    https_port 443
+
+	log {
+		format json
+
+	}	
+
+    
 }
 
 :80 {
-    reverse_proxy app:8080
+    encode zstd
+    reverse_proxy http://app:8080
+    
 }
 
 
-:443 {
-	tls internal
-    reverse_proxy app:8080
+https:// {
+	tls internal {
+		on_demand
+	}
+    encode zstd
+    reverse_proxy http://app:8080
 }

@@ -7,6 +7,14 @@ services:
         context: .
         dockerfile: Dockerfile.production
   
+
+
+  caddy:
+    depends_on:
+    - app
+    #image: hexletcomponents/devops-example-caddy
+    image: caddy:2.8.4-alpine
+
   db:
     image: postgres
     restart: always

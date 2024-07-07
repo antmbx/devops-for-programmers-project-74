@@ -16,18 +16,13 @@ services:
     - NODE_ENV=development 
 
   caddy:
-    depends_on:
-      - app
-    image: caddy:2.8.4-alpine
     ports:
     - 80:80
     - 443:443
 
     volumes:
     - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
-        
-#    links:
-#      - app:app    
+    - ./app:/app 
     
 
     
