@@ -26,8 +26,8 @@ services:
     volumes:
     - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
         
-    links:
-      - app:app    
+#    links:
+#      - app:app    
     
 
     
