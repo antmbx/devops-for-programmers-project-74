@@ -1,5 +1,7 @@
 services:
   app:
+    depends_on:
+    - db
     image: antmbx/devops-for-programmers-project-74
     build:
         dockerfile: Dockerfile.production
@@ -16,3 +18,22 @@ services:
 #    - ./app:/app
 #    ports:
 #    - 8080:8080
+
+
+
+  db:
+    image: postgres
+    restart: always
+#    environment:
+#      DATABASE_HOST: db
+#      DATABASE_NAME: postgres
+#      DATABASE_USERNAME: postgres
+#      DATABASE_PASSWORD: password
+        
+
+    
+    healthcheck:
+        test: ["CMD-SHELL", "pg_isready -U postgres"]
+        interval: 5s
+        timeout: 5s
+        retries: 5
