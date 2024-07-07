@@ -4,33 +4,13 @@ services:
     - db
     image: antmbx/devops-for-programmers-project-74
     build:
-        dockerfile: Dockerfile.production
         context: .
-#    ports:
-#    - 8080:8080
-#    volumes:
-#    - ./app:/app    
-        
-        
-#    container_name: cont_app
-    #restart: always
-#    volumes:
-#    - ./app:/app
-#    ports:
-#    - 8080:8080
-
-
+        dockerfile: Dockerfile.production
+ 
 
   db:
     image: postgres
     restart: always
-#    environment:
-#      DATABASE_HOST: db
-#      DATABASE_NAME: postgres
-#      DATABASE_USERNAME: postgres
-#      DATABASE_PASSWORD: password
-        
-
     
     healthcheck:
         test: ["CMD-SHELL", "pg_isready -U postgres"]

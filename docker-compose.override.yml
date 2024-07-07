@@ -19,10 +19,6 @@ services:
     depends_on:
       - app
     image: caddy:2.8.4-alpine
-    #build:
-        #context: .
-        #dockerfile: ./Dockerfile
-    #command: make dev
     ports:
     - 80:80
     - 443:443
@@ -30,7 +26,6 @@ services:
     volumes:
     - ./services/caddy/Caddyfile:/etc/caddy/Caddyfile
         
-
     links:
       - app:app    
     
