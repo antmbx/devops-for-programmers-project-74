@@ -1,6 +1,7 @@
 setup: install db-migrate
 
 install:
+	#chown  $(id -u): $(id -u) /work
 	npm install 
 
 db-migrate:
