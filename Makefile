@@ -8,9 +8,6 @@ clone-and-check:
 	docker run -it -w /work -v $PWD/app:/home node:20.12.2 make setup
 	docker run -it -u $(id -u) -w /work -v $PWD/app:/work -p 8080:8080 node:20.12.2 make dev
 
-# Оставить все контейнеры
-docker-stop:
-	docker stop $(docker ps -qa)
 
 #
 setup: build install 
