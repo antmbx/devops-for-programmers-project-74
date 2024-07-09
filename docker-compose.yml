@@ -9,14 +9,9 @@ services:
     command: make test #npm test
 
 
-  caddy:
-    depends_on:
-    - app
-    #image: hexletcomponents/devops-example-caddy
-    image: caddy:2.8.4-alpine
 
   db:
-    image: postgres
+    image: postgres:16
     restart: always
     #env_file: db.env # файл есть в .gitignore, но хекслет все равно проверяет его наличие
     # пришлось перенести все в .env  и закомментить ссылку на файл
