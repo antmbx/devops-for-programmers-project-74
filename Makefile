@@ -48,9 +48,9 @@ up:
 restart:
 	docker-compose restart
 
-restart:
+stop:
 	docker-compose stop
 
 
-compose-restart-proxy:
+restart-proxy:
 	docker-compose restart caddy
