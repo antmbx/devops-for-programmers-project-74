@@ -13,13 +13,36 @@ This is a simple node application that shows on the main page server HELLO HEXLE
 ## Usage
 
 
+### Build & install
+```bash
+make setup
+```
+
+### Check Services
 
 ```bash
-docker run -p 8080:8080 -e NODE_ENV=development antmbx/devops-for-programmers-project-74 make dev
-
-# open http://0.0.0.0:8080 in browser
-
+make test
 ```
+
+### Service mngmt
+
+```bash
+make up # docker-compose up -d
+make stop # docker-compose stop
+make restart # docker-compose restart
+```
+### Proxy 
+
+config: ./services/caddy/Caddyfile
+
+```bash
+# restart proxy
+restart-proxy
+```
+
+
+
+
 
 Edit *.env* file to set up environment variables.
 
@@ -31,12 +54,12 @@ DATABASE_PORT=5432
 DATABASE_HOST=db
 ```
 
-P.S.
-ignore please my files:
-- deploy_from_dockerhub.sh
-- runapp.sh
-- Caddyfile_b
-- etc
+
+### PostgreSQL
+
+db & config po dir path */var/pgdata*
+
+
 
 
 ---

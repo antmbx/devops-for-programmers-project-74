@@ -22,8 +22,6 @@ setup-and-check-push: install build img-check push
 ##
 build:
 	docker-compose -f docker-compose.yml build app
-
-
 ##
 install:
 	docker-compose run --rm app make setup
