@@ -10,7 +10,7 @@ clone-and-check:
 
 # Оставить все контейнеры
 docker-stop:
-	docker stop $(sudo docker ps -qa)
+	docker stop $(docker ps -qa)
 
 #
 setup: compose-install compose-build
