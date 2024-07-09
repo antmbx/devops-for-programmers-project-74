@@ -24,10 +24,11 @@ docker run -p 8080:8080 -e NODE_ENV=development antmbx/devops-for-programmers-pr
 Edit *.env* file to set up environment variables.
 
 ```env
-DATABASE_HOST=[db host]
-DATABASE_NAME=[db name]
-DATABASE_USERNAME=[db username]
-DATABASE_PASSWORD=[db password]
+DATABASE_NAME=postgres
+DATABASE_USERNAME=userdb
+DATABASE_PASSWORD=password
+DATABASE_PORT=5432
+DATABASE_HOST=db
 ```
 
 P.S.
