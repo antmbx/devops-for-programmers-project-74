@@ -13,22 +13,25 @@ docker-stop:
 	docker stop $(docker ps -qa)
 
 #
-setup: compose-install compose-build
+setup: build install 
 
 #
-setup-and-check: compose-install compose-build compose-img-check
+setup-and-check: install build img-check
 
 #
-setup-and-check-push: compose-install compose-build compose-img-check compose-push
+setup-and-check-push: install build img-check push
 
 
 ##
 build:
 	docker-compose -f docker-compose.yml build app
+
+
 ##
 install:
 	docker-compose run --rm app make setup
-
+	sudo mkdir -p /var/pgdata
+	sudo cp -f services/postgres/pg_hba.conf /var/pgdata
 ##
 img-check:
 	docker run -p 8080:8080 -e NODE_ENV=development antmbx/devops-for-programmers-project-74 make dev

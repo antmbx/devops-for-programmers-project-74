@@ -7,6 +7,12 @@ services:
         context: .
         dockerfile: Dockerfile.production
     command: make test
+    environment:
+    - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+    - DATABASE_NAME=${DATABASE_NAME}
+    - DATABASE_USERNAME=${DATABASE_USERNAME}
+    - DATABASE_PORT=${DATABASE_PORT}
+    - DATABASE_HOST=${DATABASE_HOST}
 
 
 
@@ -14,14 +20,16 @@ services:
     image: postgres:16
     restart: always
     #env_file: db.env # файл есть в .gitignore, но хекслет все равно проверяет его наличие
-    # пришлось перенести все в .env  и закомментить ссылку на файл
+    # пришлось перенести все в .env  и закомментить ссылку на файл и ввести переменные
     healthcheck:
         test: ["CMD-SHELL", "pg_isready -U postgres"]
         interval: 5s
         timeout: 5s
         retries: 5
     volumes:
-    - ./pgdata:/var/lib/postgresql/data
-
-
+    - /var/pgdata:/var/lib/postgresql/data
+    environment:
+    - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+    - POSTGRES_USER=${DATABASE_USERNAME}
+    - POSTGRES_DB=${DATABASE_NAME}
         
