@@ -37,11 +37,8 @@ config: ./services/caddy/Caddyfile
 
 ```bash
 # restart proxy
-restart-proxy
+make restart-proxy
 ```
-
-
-
 
 
 Edit *.env* file to set up environment variables.
