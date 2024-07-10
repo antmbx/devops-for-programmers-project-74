@@ -23,8 +23,9 @@ https://github.com/antmbx/devops-for-programmers-project-74/blob/1d95e6dc5bd4efb
 
 #### 3) Желательно указать конкретную версию https://github.com/antmbx/devops-for-programmers-project-74/blob/365e61b153486c254ed066107b957b63545a5967/docker-compose.yml#L19
 
-##### Указал
-https://github.com/antmbx/devops-for-programmers-project-74/blob/8261642201f91dc2cde3fdca2ced91e4633f4206/docker-compose.yml#L20
+> [!NOTE] 
+> ##### Указал
+> https://github.com/antmbx/devops-for-programmers-project-74/blob/8261642201f91dc2cde3fdca2ced91e4633f4206/docker-compose.yml#L20
 
 
 
