@@ -1,3 +1,5 @@
+# dc
+
 services:
   app:
     depends_on:
@@ -30,4 +32,5 @@ services:
     - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
     - POSTGRES_USER=${DATABASE_USERNAME}
     - POSTGRES_DB=${DATABASE_NAME}
-        
+    
+
