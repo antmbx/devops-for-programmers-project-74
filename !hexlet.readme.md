@@ -1,3 +1,6 @@
+
+### Комментарии к замечаниям
+
 #### 1) Не хватает команды npm test https://github.com/antmbx/devops-for-programmers-project-74/blob/365e61b153486c254ed066107b957b63545a5967/docker-compose.yml#L2
 
 по заданию make test, добавил
