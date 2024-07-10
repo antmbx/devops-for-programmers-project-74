@@ -10,7 +10,7 @@ https://github.com/antmbx/devops-for-programmers-project-74/blob/1d95e6dc5bd4efb
 
 #### 2) Похоже что это лишнее, так как в задание только 'Добавьте сервис caddy в docker-compose.override.yml.' 
 
-Удалил Caddy 
+Удалил Caddy из docker-compose.yml
 
 
 #### 3) Желательно указать конкретную версию https://github.com/antmbx/devops-for-programmers-project-74/blob/365e61b153486c254ed066107b957b63545a5967/docker-compose.yml#L19
