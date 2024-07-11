@@ -10,13 +10,13 @@ clone-and-check:
 
 
 #
-setup: build install 
+setup: compose-build compose-install 
 
 #
-setup-and-check: install build img-check
+setup-and-check: install compose-build img-check
 
 #
-setup-and-check-push: install build img-check push
+setup-and-check-push: install compose-build img-check compose-push
 
 
 ##
