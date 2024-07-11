@@ -23,7 +23,9 @@
 ### 3) В задании просят 'Он должен запускать тесты, собирать production-образ и отправлять его на Docker Hub с тегом latest.', предлагаю добавить тесты. https://github.com/antmbx/devops-for-programmers-project-74/blob/main/.github/workflows/push.yml
 
 
-
+> Готово. Добавил переменные окружения для создания тестовой базы
+>
+> https://github.com/antmbx/devops-for-programmers-project-74/blob/6580df39f2e8b2b5d4cd76675a92b62e03e5a50d/.github/workflows/push.yml#L10-40
 
 
 
