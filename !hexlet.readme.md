@@ -1,5 +1,28 @@
 
-### Комментарии к замечаниям
+# Комментарии к замечаниям
+
+## 11.07.2024
+
+### 1) Этот файл используется? Если нет, предлагаю убрать https://github.com/antmbx/devops-for-programmers-project-74/blob/main/Makefile.app
+
+> Используется. После клонирования репозитория, подменяется Makefile
+>
+> https://github.com/antmbx/devops-for-programmers-project-74/blob/bdc759e5cab9ba68bf0799402278d3f4184c03f0/Makefile#L7
+
+
+
+### 2) Для удобства подобные команды, которые используют docker compose можно именовать с префиксом, например make compose-up https://github.com/antmbx/devops-for-programmers-project-74/blob/bdc759e5cab9ba68bf0799402278d3f4184c03f0/Makefile#L35-L54
+
+
+
+### 3) В задании просят 'Он должен запускать тесты, собирать production-образ и отправлять его на Docker Hub с тегом latest.', предлагаю добавить тесты. https://github.com/antmbx/devops-for-programmers-project-74/blob/main/.github/workflows/push.yml
+
+
+
+
+
+
+## 08.07.2024
 
 #### 1) Не хватает команды npm test https://github.com/antmbx/devops-for-programmers-project-74/blob/365e61b153486c254ed066107b957b63545a5967/docker-compose.yml#L2
 

@@ -20,10 +20,10 @@ setup-and-check-push: install build img-check push
 
 
 ##
-build:
+compose-build:
 	docker-compose -f docker-compose.yml build app
 ##
-install:
+compose-install:
 	docker-compose run --rm app make setup
 	sudo mkdir -p /var/pgdata
 	sudo cp -f services/postgres/pg_hba.conf /var/pgdata
@@ -32,23 +32,23 @@ img-check:
 	docker run -p 8080:8080 -e NODE_ENV=development antmbx/devops-for-programmers-project-74 make dev
 
 ##
-push:
+compose-push:
 	docker-compose -f docker-compose.yml push app
 
 
-test:
+compose-test:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
 
 
-up:
+compose-up:
 	docker-compose up -d
 
-restart:
+compose-restart:
 	docker-compose restart
 
-stop:
+compose-stop:
 	docker-compose stop
 
 
-restart-proxy:
+compose- restart-proxy:
 	docker-compose restart caddy
