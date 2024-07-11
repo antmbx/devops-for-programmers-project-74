@@ -21,15 +21,15 @@ make setup
 ### Check Services
 
 ```bash
-make test
+make compose-test
 ```
 
 ### Service mngmt
 
 ```bash
-make up # docker-compose up -d
-make stop # docker-compose stop
-make restart # docker-compose restart
+make compose-up # docker-compose up -d
+make compose-stop # docker-compose stop
+make compose-restart # docker-compose restart
 ```
 ### Proxy 
 
@@ -37,7 +37,7 @@ config: ./services/caddy/Caddyfile
 
 ```bash
 # restart proxy
-make restart-proxy
+make compose-restart-proxy
 ```
 
 
