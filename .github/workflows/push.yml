@@ -28,6 +28,16 @@ jobs:
         run: make compose-install
 
       - name: Run tests
+        env:
+          POSTGRES_PASSWORD: test-password
+          POSTGRES_USER: test-user
+          POSTGRES_DB: test-db
+          DATABASE_PASSWORD: test-password
+          DATABASE_NAME: testdb
+          DATABASE_USERNAME: test-user
+          DATABASE_PORT: 5432
+          DATABASE_HOST: db      
+
         run: make compose-test
 
 
