@@ -15,7 +15,7 @@
 
 > Исправил
 > 
-> https://github.com/antmbx/devops-for-programmers-project-74/blob/55ca18c46e27dd9d74a655d8ec1d6aa614392faa/Makefile#L35-L52
+> https://github.com/antmbx/devops-for-programmers-project-74/blob/524a2babb68d77ed156599576e488e123246c0e3/Makefile#L35-L52
 
 
 
