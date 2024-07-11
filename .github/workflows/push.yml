@@ -32,3 +32,5 @@ jobs:
           cache-to: type=inline
           push: true
           tags: ${{ env.APP_IMAGE_NAME }}:latest
+        
+      - run: make compose-test

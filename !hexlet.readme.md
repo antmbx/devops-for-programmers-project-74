@@ -13,6 +13,11 @@
 
 ### 2) Для удобства подобные команды, которые используют docker compose можно именовать с префиксом, например make compose-up https://github.com/antmbx/devops-for-programmers-project-74/blob/bdc759e5cab9ba68bf0799402278d3f4184c03f0/Makefile#L35-L54
 
+> Исправил
+> 
+> https://github.com/antmbx/devops-for-programmers-project-74/blob/e7194998a0b7cf90800b764596f342c9f3a4e958/Makefile#L35
+
+
 
 
 ### 3) В задании просят 'Он должен запускать тесты, собирать production-образ и отправлять его на Docker Hub с тегом latest.', предлагаю добавить тесты. https://github.com/antmbx/devops-for-programmers-project-74/blob/main/.github/workflows/push.yml
