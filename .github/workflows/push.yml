@@ -17,8 +17,6 @@ jobs:
       
       - name: Run tests
         run: make compose-test
-        with:
-          context: .
 
       - uses: actions/checkout@v3
 
