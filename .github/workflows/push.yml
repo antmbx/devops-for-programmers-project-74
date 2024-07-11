@@ -14,6 +14,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      
+      - name: Run tests
+        run: make compose-test
 
       - uses: actions/checkout@v3
 
@@ -33,4 +36,4 @@ jobs:
           push: true
           tags: ${{ env.APP_IMAGE_NAME }}:latest
         
-      - run: make compose-test
+      
