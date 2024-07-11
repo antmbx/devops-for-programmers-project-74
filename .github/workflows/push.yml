@@ -34,7 +34,7 @@ jobs:
           DATABASE_USERNAME: "test-user"
           DATABASE_PORT: "5432"
           DATABASE_HOST: "db"       
-        run: make compose-install
+        run: make setup
         
 
       - name: Run tests
