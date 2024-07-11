@@ -24,6 +24,9 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
 
+      - name: Setup
+        run: compose-install
+
       - name: Run tests
         run: make compose-test
 
