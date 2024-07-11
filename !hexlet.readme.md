@@ -15,7 +15,7 @@
 
 > Исправил
 > 
-> https://github.com/antmbx/devops-for-programmers-project-74/blob/e7194998a0b7cf90800b764596f342c9f3a4e958/Makefile#L35
+> https://github.com/antmbx/devops-for-programmers-project-74/blob/e7194998a0b7cf90800b764596f342c9f3a4e958/Makefile#L35-L54
 
 
 
@@ -25,7 +25,7 @@
 
 > Готово. Добавил переменные окружения для создания тестовой базы
 >
-> https://github.com/antmbx/devops-for-programmers-project-74/blob/6580df39f2e8b2b5d4cd76675a92b62e03e5a50d/.github/workflows/push.yml#L10-40
+> https://github.com/antmbx/devops-for-programmers-project-74/blob/6580df39f2e8b2b5d4cd76675a92b62e03e5a50d/.github/workflows/push.yml#L10-L40
 
 
 
